@@ -1,0 +1,17 @@
+int mostWordsFound(char** sentences, int sentencesSize) {
+    int wordcount=0;
+    for(int i=0;i<sentencesSize;i++){
+        int counter=0;
+        for(int j=0;sentences[i][j]!='\0';j++){
+            if(sentences[i][j]==' '){
+                counter++;
+            }
+        }
+        if(counter>wordcount){
+            wordcount=counter;
+        }
+    }
+    return wordcount+1;
+     
+    
+}
